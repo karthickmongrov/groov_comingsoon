@@ -1,0 +1,373 @@
+// bower:scss
+// endbower
+
+@import "bower_components/bootstrap/scss/bootstrap.scss";
+/*
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+
+.header,
+.marketing,
+.footer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.header {
+  padding-bottom: 1rem;
+  border-bottom: .05rem solid #e5e5e5;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 3rem;
+}
+
+.footer {
+  padding-top: 1.5rem;
+  color: #777;
+  border-top: .05rem solid #e5e5e5;
+}
+
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+}
+.container-narrow > hr {
+  margin: 2rem 0;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: .05rem solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: .75rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+.marketing {
+  margin: 3rem 0;
+}
+.marketing p + h4 {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+ 
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+*/
+
+@font-face {
+  font-family: 'texta-light';
+  src: url('../fonts/texta_light-webfont.woff2') format('woff2'),
+       url('../fonts/texta_light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'texta-bold';
+  src: url('../fonts/texta_bold-webfont.woff2') format('woff2'),
+       url('../fonts/texta_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  font-family: 'texta-light';
+}
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+h1 strong{
+	font-weight:normal;
+	font-family:texta-bold;
+}
+
+h1 {
+    font-weight: normal;
+    font-family: texta-light;
+    color: #535353;
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 10px;
+}
+
+h2 {
+	font-weight:normal;
+	font-family:texta-bold;
+	color:#535353;
+	font-size:24px;
+}
+h3 {
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.left_cont img {
+  max-width: 100%;
+  height: auto;
+  margin-top: -15px;
+  float: right;
+  margin-right: 10px;
+}
+
+.logo_cont {
+  float: left;
+  overflow: hidden;
+  clear: both;
+  margin-top: 20%;
+}
+
+.decription_sec {
+  clear: both;
+  overflow: hidden;
+}
+
+.left_cont_revert {
+  display: none;
+}
+
+@media only screen and (max-width:840px) {
+.logo_cont {
+  margin-top: 20px;
+}
+}
+
+
+@media only screen and (max-width:767px) {
+
+  .left_cont_revert {
+    display: block;
+    overflow: hidden;
+  }
+  .left_cont {
+    display: none;
+  }
+
+  h3 {
+    text-align:center;
+  }
+  .left_cont {
+    display:none;
+  }
+  
+  .left_cont_revert {
+    display:block;
+  }
+
+  .left_cont_revert img {
+    margin-left: -40px;
+}
+  
+  
+  
+  .right_cont,.left_cont{
+    width:100%;
+    overflow:hidden;
+    float:left;
+  }
+  
+  .logo_cont{
+    margin-top:0;
+    width:100%;
+    text-align:center;
+  }
+  
+  .logo_cont img {
+      max-width: 50%;
+      margin-top: 20px;
+  }
+  
+  .decription_sec {
+    text-align:center;
+  }
+  
+  .cta {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  
+    
+    
+  }
+
+  @media only screen and (max-width:480px) {
+
+  .cta.active {
+      width: 290px !important;
+  }
+  .cta .input input {
+      width: 160px !important;
+  }
+    
+  }
+
+
+/*Scubscribe styles starts here*/
+
+
+::-webkit-input-placeholder {
+  color: #B7E1FF;
+}
+
+.cta {
+  font-weight: bold;
+  border-radius: 25px;
+  line-height: 50px;
+  height: 50px;
+  width: 170px;
+  text-align: center;
+  transition: width .2s ease-in-out;
+  cursor: pointer;
+  color: #FFF;
+  font-size:16px;
+  background:#0397FF;
+
+}
+.cta .hide {
+  display: none;
+}
+.cta form {
+  display: flex;
+}
+.cta span {
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  -webkit-animation: fadeIn .3s ease-in-out;
+          animation: fadeIn .3s ease-in-out;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.cta .input {
+  display: none;
+  opacity: 0;
+  flex: 3;
+  text-align: left;
+}
+.cta .input input {
+  border: 0;
+  width: 220px;
+  height: 45px;
+  margin: 0 0 0 25px;
+  outline: none;
+  color: #FFF;
+  background: #0397ff;
+}
+.cta .button {
+  display: none;
+  opacity: 0;
+  flex: 1;
+}
+.cta .button button {
+  outline: none;
+  float: right;
+  padding: 0 15px;
+  height: 40px;
+  background: #FFFFFF;
+  line-height: 20px;
+  border-radius: 25px;
+  color: #0397ff;
+  border: 0;
+  margin: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+.cta .button button:disabled {
+    color: #186abd;
+    opacity: 0.6;
+}
+.cta.sent {
+    cursor: default;
+    background: #a5cc03;
+}
+.cta.active {
+  width: 350px;
+  text-align: left;
+  transition: width .2s ease-in-out;
+  cursor: default;
+}
+.cta.active span {
+  display: none;
+}
+.cta.active .input, .cta.active .button {
+  display: block;
+  -webkit-animation: fadeIn .3s ease-in-out;
+          animation: fadeIn .3s ease-in-out;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/*Scubscribe styles ends here*/

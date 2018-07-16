@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Groov - We are re-imagining the way dApps (Blockchain apps) are delivered.</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-md-6 left_cont">
+            <div class="row d-flex justify-content-end">
+                <div class="col-md-10">
+                    <img src="images/mobile1.gif">
+                </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-6">
+            <div class="logo_cont">
+              <img src="images/logo.png" width="200">
+            </div>
+            <div class="decription_sec">
+              <h1>We are <br> <strong>re-imagining</strong> the way <br> <strong>dApps </strong> <br>are delivered.</h1>
+              <h2>We are launching soon.</h2>
+            </div>
+            <div class="subscribe_sec">
+              <div class='centerMe'>
+                <h3>Join our mailing list and be the first to get notified.</h3>
+                <div class='cta'>
+                  <span>Subscribe Now</span>
+                  <form>
+                    <div class='input'>
+                      <input placeholder='E-mail'>
+                    </div>
+                    <div class='button'>
+                      <button disabled='disabled' type='submit'>Subscribe</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 left_cont_revert">
+              <div class="row d-flex justify-content-end">
+                  <div class="col-md-10">
+                      <img src="images/mobile1.gif">
+                  </div>
+  
+              </div>
+  
+            </div>
+
+         
+
+        </div>
+    </div>
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <script src="scripts/subscribe.js"></script>
+
+    <script>
+    
+$('.cta span').click(function(){
+    $('.cta:not(.sent)').addClass('active');
+    $('input').focus();
+});
+
+var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+$('input').on('input', function(){
+    if(regex.test($(this).val())) {
+        $('button').removeAttr('disabled'); }
+    else {
+        $('button').attr('disabled', 'disabled'); }
+});
+
+$('form').submit(function(x){
+    x.preventDefault();
+    if(regex.test($('input').val())) {
+        $('.cta span').text('Thank you!');
+        $('.cta').removeClass('active').addClass('sent');
+		
+    }
+});
+    </script>
+  </body>
+</html>
